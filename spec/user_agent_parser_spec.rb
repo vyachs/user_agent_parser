@@ -15,6 +15,7 @@ describe UserAgentParser do
     it { @agent_str = 'Duriana/2.1 Build/30 Restlet/2.1.2 Device/LENOVO Lenovo A516' }
     it { @agent_str = 'Duriana/2.1 Build/30 Restlet/2.1.2 Device/LENOVO Lenovo A516  ' }
     it { @agent_str = 'Android/4.0.4 Duriana/2.1 Build/32 Device/samsung SM-T211' }
+    it { @agent_str = 'Android/4.2.2 Duriana/4.3.8 Build/134 Device/iPhone MF353ZP/A' }
 
     after { expect(described_class.parse(@agent_str)).to eq('android') }
   end

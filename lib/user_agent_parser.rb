@@ -2,7 +2,7 @@ require 'useragent_parser'
 module UserAgentParser
   def self.parse(string)
     stripped_str = string.strip
-    return 'web' if UseragentParser.parse(stripped_str).browser != 'Other '
+    return 'web' if !stripped_str.include?('Duriana') && UseragentParser.parse(stripped_str).browser != 'Other '
     case stripped_str
     when /^Duriana Ruby Gem .+$/
       'web'
